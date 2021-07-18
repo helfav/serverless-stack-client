@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
 import config from './config';
 
+console.log('Running Node.js version:', process.version)
+
 Amplify.configure({
   Auth: {
     mandatorySignIn: true,
