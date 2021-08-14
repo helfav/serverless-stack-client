@@ -56,7 +56,7 @@ export default function Signup() {
     setIsLoading(true);
   
     try {
-      await Auth.confirmSignUp(fields.email, fields.confirmationCode);
+      await Auth.confirmSignUp(fields.email);
       await Auth.signIn(fields.email, fields.password);
   
       userHasAuthenticated(true);
