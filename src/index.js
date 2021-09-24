@@ -1,3 +1,4 @@
+import { datadogRum } from '@datadog/browser-rum';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
@@ -6,9 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
 import config from './config';
-import { datadogRum } from '@datadog/browser-rum';
 
-console.log('Running Node.js version:', process.version)
 
 datadogRum.init({
     applicationId: '2221e84c-2163-438d-908c-3731d8cdb427',
