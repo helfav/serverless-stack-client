@@ -6,8 +6,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
 import config from './config';
+import { datadogRum } from '@datadog/browser-rum';
 
 console.log('Running Node.js version:', process.version)
+
+datadogRum.init({
+    applicationId: '2221e84c-2163-438d-908c-3731d8cdb427',
+    clientToken: 'pub42c78ee209c32499d7d0524788493fc0',
+    site: 'datadoghq.com',
+    service:'notes-test',
+    env:'prod',
+    version: '1.0.0',
+    sampleRate: 100,
+    trackInteractions: true
+});
 
 Amplify.configure({
   Auth: {
