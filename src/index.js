@@ -17,8 +17,11 @@ datadogRum.init({
     env:'prod',
     version: '1.0.0',
     sampleRate: 100,
+    replaySampleRate: 100,
     trackInteractions: true
 });
+
+datadogRum.startSessionReplayRecording();
 
 Amplify.configure({
   Auth: {
